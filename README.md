@@ -1,8 +1,8 @@
 # Satellite Heroku Template
 
-One-click deployment template for [Satellite](https://github.com/your-org/satellite) - a document management system with sync.
+One-click deployment template for [Satellite](https://github.com/fileverse/satellite) - a document management system with sync.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/your-org/satellite-heroku-template)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/fileverse/satellite-heroku-template)
 
 ## Prerequisites
 
