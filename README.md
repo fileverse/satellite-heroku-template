@@ -1,6 +1,6 @@
 # Satellite Heroku Template
 
-One-click deployment template for [Satellite](https://github.com/your-org/satellite) - a document management system with blockchain sync.
+One-click deployment template for [Satellite](https://github.com/your-org/satellite) - a document management system with sync.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/your-org/satellite-heroku-template)
 
@@ -13,20 +13,20 @@ Before deploying, you'll need:
 
 ## Environment Variables
 
-| Variable | Required | Description | Default |
-|----------|----------|-------------|---------|
-| `API_KEY` | Yes | Storage server authentication key | - |
-| `PIMLICO_API_KEY` | Yes | Pimlico account abstraction API key | - |
-| `DB_PATH` | No | SQLite database path | `/app/data/satellite.db` |
-| `RPC_URL` | No | Ethereum RPC endpoint | `https://rpc.sepolia.org` |
-| `PORT` | Auto | Automatically set by Heroku | - |
+| Variable          | Required | Description                         | Default                   |
+| ----------------- | -------- | ----------------------------------- | ------------------------- |
+| `API_KEY`         | Yes      | Storage server authentication key   | -                         |
+| `PIMLICO_API_KEY` | Yes      | Pimlico account abstraction API key | -                         |
+| `DB_PATH`         | No       | SQLite database path                | `/app/data/satellite.db`  |
+| `RPC_URL`         | No       | Ethereum RPC endpoint               | `https://rpc.sepolia.org` |
+| `PORT`            | Auto     | Automatically set by Heroku         | -                         |
 
 ## Architecture
 
 This template deploys two processes:
 
 - **Web Dyno**: Runs the API server for document management
-- **Worker Dyno**: Processes blockchain sync jobs
+- **Worker Dyno**: Processes sync jobs
 
 ## Important Limitations
 
@@ -47,11 +47,13 @@ Heroku uses an ephemeral filesystem. This means:
 ## Post-Deployment Setup
 
 1. After deployment, verify both dynos are running:
+
    ```bash
    heroku ps
    ```
 
 2. Check the logs for any startup issues:
+
    ```bash
    heroku logs --tail
    ```

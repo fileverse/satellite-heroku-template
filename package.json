@@ -1,14 +1,11 @@
 {
   "name": "satellite-heroku-template",
   "version": "1.0.0",
-  "description": "Heroku deployment template for Satellite - Document management with blockchain sync",
+  "description": "Fileverse Satellite Template",
   "type": "module",
   "scripts": {
     "start": "node server.js",
     "worker": "node worker.js"
-  },
-  "dependencies": {
-    "my-satellite": "^0.0.6"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -16,8 +13,10 @@
   "keywords": [
     "satellite",
     "heroku",
-    "blockchain",
     "document-management"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "my-satellite": "^0.0.7"
+  }
 }
