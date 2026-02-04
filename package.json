@@ -1,0 +1,11 @@
+{
+  "name": "satellite-heroku-template",
+  "version": "1.0.0",
+  "scripts": {
+    "start:api": "my-satellite start:api",
+    "start:worker": "my-satellite start:worker"
+  },
+  "dependencies": {
+    "my-satellite": "latest"
+  }
+}

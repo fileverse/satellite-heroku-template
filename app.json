@@ -1,0 +1,21 @@
+{
+  "name": "Satellite App",
+  "description": "One-click deploy template for my-satellite",
+  "repository": "https://github.com/fileverse/satellite-heroku-template",
+  "env": {
+    "EXAMPLE_VAR": {
+      "description": "An example environment variable",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    },
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
