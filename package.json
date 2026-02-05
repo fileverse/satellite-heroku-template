@@ -14,5 +14,8 @@
     "heroku",
     "document-management"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@fileverse/satellite": "^0.0.8"
+  }
 }
