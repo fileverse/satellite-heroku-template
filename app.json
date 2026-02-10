@@ -16,10 +16,6 @@
       "description": "API key for storage server authentication",
       "required": true
     },
-    "PIMLICO_API_KEY": {
-      "description": "Pimlico API key for account abstraction (get from https://pimlico.io)",
-      "required": true
-    },
     "RPC_URL": {
       "description": "Ethereum RPC endpoint",
       "value": "https://rpc.sepolia.org"

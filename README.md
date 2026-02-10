@@ -8,19 +8,17 @@ One-click deployment template for [Satellite](https://github.com/fileverse/satel
 
 Before deploying, you'll need:
 
-1. **Pimlico API Key** - Sign up at [pimlico.io](https://pimlico.io) to get an API key for account abstraction services
-2. **Storage Server API Key** - API key for the storage server authentication
+1. **Storage Server API Key** - API key for the storage server authentication
 
 ## Environment Variables
 
-| Variable          | Required | Description                         | Default                   |
-| ----------------- | -------- | ----------------------------------- | ------------------------- |
-| `API_KEY`         | Yes      | Storage server authentication key   | -                         |
-| `PIMLICO_API_KEY` | Yes      | Pimlico account abstraction API key | -                         |
-| `DB_PATH`         | No       | SQLite database path                | `/app/data/satellite.db`  |
-| `RPC_URL`         | No       | Ethereum RPC endpoint               | `https://rpc.sepolia.org` |
-| `INLINE_WORKER`   | No       | Run worker in same process          | `true`                    |
-| `PORT`            | Auto     | Automatically set by Heroku         | -                         |
+| Variable        | Required | Description                       | Default                   |
+| --------------- | -------- | --------------------------------- | ------------------------- | --- |
+| `API_KEY`       | Yes      | Storage server authentication key | -                         |     |
+| `DB_PATH`       | No       | SQLite database path              | `/app/data/satellite.db`  |
+| `RPC_URL`       | No       | Ethereum RPC endpoint             | `https://rpc.sepolia.org` |
+| `INLINE_WORKER` | No       | Run worker in same process        | `true`                    |
+| `PORT`          | Auto     | Automatically set by Heroku       | -                         |
 
 ## Architecture
 
@@ -63,7 +61,6 @@ To run locally:
 npm install
 export DB_PATH="./data/satellite.db"
 export API_KEY="your-api-key"
-export PIMLICO_API_KEY="your-pimlico-key"
 npm start
 ```
 
