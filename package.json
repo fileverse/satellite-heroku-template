@@ -16,6 +16,6 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "@fileverse/satellite": "^0.0.12"
+    "@fileverse/satellite": "^0.0.13"
   }
 }
