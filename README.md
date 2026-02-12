@@ -13,31 +13,21 @@ Before deploying, you'll need:
 ## Environment Variables
 
 | Variable        | Required | Description                       | Default                   |
-| --------------- | -------- | --------------------------------- | ------------------------- | --- |
-| `API_KEY`       | Yes      | Storage server authentication key | -                         |     |
-| `DB_PATH`       | No       | SQLite database path              | `/app/data/api.db`        |
+| --------------- | -------- | --------------------------------- | ------------------------- |
+| `API_KEY`       | Yes      | Storage server authentication key | -                         |
+| `DATABASE_URL`  | Auto     | PostgreSQL connection string (set by Heroku Postgres addon) | -  |
 | `RPC_URL`       | No       | Ethereum RPC endpoint             | `https://rpc.sepolia.org` |
 | `INLINE_WORKER` | No       | Run worker in same process        | `true`                    |
 | `PORT`          | Auto     | Automatically set by Heroku       | -                         |
 
 ## Architecture
 
-This template deploys a single web dyno that runs both:
+This template deploys a single web dyno with **Heroku Postgres** that runs both:
 
 - **API Server**: REST API for document management
 - **Worker**: Background process for sync jobs
 
-Both run in the same process (via `INLINE_WORKER=true`) to share the SQLite database. This is required on Heroku because each dyno has its own ephemeral filesystem.
-
-## Important Limitations
-
-### Ephemeral SQLite Storage
-
-Heroku uses an ephemeral filesystem. This means:
-
-- SQLite database data is **not persistent** across dyno restarts or deployments
-- Data will be lost when the dyno cycles (approximately every 24 hours on free/hobby plans)
-- For production use, consider migrating to Heroku Postgres
+Both run in the same process (via `INLINE_WORKER=true`). The Heroku Postgres addon is automatically provisioned and `DATABASE_URL` is set by Heroku, so data persists across dyno restarts and deployments.
 
 ## Post-Deployment Setup
 
@@ -59,7 +49,7 @@ To run locally:
 
 ```bash
 npm install
-export DB_PATH="./data/fileverse-api.db"
+export DATABASE_URL="postgresql://localhost:5432/fileverse"
 export API_KEY="your-api-key"
 npm start
 ```

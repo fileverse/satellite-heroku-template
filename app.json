@@ -3,14 +3,11 @@
   "description": "Fileverse API Template",
   "repository": "https://github.com/fileverse/api-heroku-template",
   "keywords": ["node", "express"],
+  "addons": ["heroku-postgresql:essential-0"],
   "env": {
     "NODE_ENV": {
       "description": "Node environment",
       "value": "production"
-    },
-    "DB_PATH": {
-      "description": "SQLite database path (ephemeral on Heroku)",
-      "value": "/app/data/fileverse-api.db"
     },
     "API_KEY": {
       "description": "API key for storage server authentication",
