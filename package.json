@@ -16,6 +16,6 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "@fileverse/api": "^0.0.4"
+    "@fileverse/api": "^0.0.5"
   }
 }
